@@ -1,10 +1,14 @@
 ﻿# Password Strength Checker
 
-A professional Python 3.13+ Tkinter desktop application for analyzing password strength with entropy estimation, pattern detection, real-time feedback, and secure password generation.
+A Python desktop application for password strength analysis and secure password generation built with Python and Tkinter.
 
 ## Overview
 
 Password Strength Checker is a secure, offline password analysis tool built with clean architecture principles. It provides instant strength assessment, actionable feedback, and export options without logging or transmitting passwords.
+
+## Purpose
+
+This project was developed as part of my cybersecurity learning journey to explore password security, entropy estimation, secure password generation, and secure software development practices using Python.
 
 ## Features
 
@@ -34,14 +38,17 @@ Password Strength Checker is a secure, offline password analysis tool built with
 
 ## Screenshots
 
-> [Screenshots would be displayed here in a real published version]
+### Main Window
 
-The interface includes:
-- Password input and analysis panel
-- Strength score and entropy cards
-- Crack time estimate
-- Password generator controls
-- Rule-by-rule feedback list
+![Main Window](docs/screenshots/main-window.png)
+
+### Password Analysis
+
+![Password Analysis](docs/screenshots/password-analysis.png)
+
+### Password Generator
+
+![Password Generator](docs/screenshots/password-generator.png)
 
 ## Project Structure
 
@@ -74,10 +81,12 @@ password-strength-checker/
 
 ### Setup
 
-1. Clone the repository:
-   ```bash
-   cd password-strength-checker
-   ```
+1. Clone the repository
+
+```bash
+git clone https://github.com/Sithiraharithajeewa/password-strength-checker.git
+cd password-strength-checker
+```
 
 2. Create and activate a virtual environment:
    ```bash
@@ -127,7 +136,34 @@ python -m password_strength_checker.main
 - pytest
 - ruff
 - mypy
-- Python standard library modules: `pathlib`, `dataclasses`, `typing`, `logging`, `csv`, `json`
+- Key Python libraries:
+  - pathlib
+  - dataclasses
+  - typing
+  - logging
+  - csv
+  - json
+  - secrets
+
+## Testing
+
+Run the test suite:
+
+```bash
+python -m pytest
+```
+
+Run linting:
+
+```bash
+python -m ruff check .
+```
+
+Run type checking:
+
+```bash
+python -m mypy src
+```
 
 ## Future Improvements
 
