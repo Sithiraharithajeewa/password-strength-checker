@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "password-strength-checker"
+version = "0.1.0"
+description = "A professional Tkinter password strength checker backend."
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+password-strength-checker = "password_strength_checker.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+omit = [
+    "src/password_strength_checker/presentation/*",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+mypy_path = "src"

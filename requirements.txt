@@ -1,0 +1,4 @@
+# Runtime dependencies for Password Strength Checker.
+#
+# Tkinter is part of the Python standard library on the target platform.
+# No third-party runtime dependencies are required at this stage.
