@@ -1,10 +1,10 @@
-﻿# Password Strength Checker
+# Password Strength Checker
 
-A Python desktop application for password strength analysis and secure password generation built with Python and Tkinter.
+A Python desktop application for password strength analysis and secure password generation built with **Python** and **Tkinter**.
 
 ## Overview
 
-Password Strength Checker is a secure, offline password analysis tool built with clean architecture principles. It provides instant strength assessment, actionable feedback, and export options without logging or transmitting passwords.
+Password Strength Checker is an offline cybersecurity tool that evaluates password strength using multiple security checks, including entropy estimation, pattern detection, and common password analysis. It also generates strong passwords using Python's `secrets` module.
 
 ## Purpose
 
@@ -13,28 +13,35 @@ This project was developed as part of my cybersecurity learning journey to explo
 ## Features
 
 ### Password Analysis
-- **Score:** 0-100 strength rating with five strength levels
-- **Entropy calculation:** Estimates password randomness in bits
-- **Crack time estimation:** Practical time-to-break guidance
-- **Pattern detection:** Repeated sequences, sequential characters, keyboard walks, dictionary word detection, and common passwords
-- **Rule feedback:** Clear pass/fail indicators for password requirements
+- Password strength score (0–100)
+- Entropy calculation
+- Estimated password crack time
+- Common password detection
+- Dictionary word detection
+- Sequential and keyboard pattern detection
+- Rule-by-rule validation
+- Security recommendations
 
-### Password Generation
-- **Configurable character sets:** Uppercase, lowercase, numbers, symbols
-- **Length range:** 12-128 characters
-- **Secure randomness:** Uses Python's `secrets` module
-- **Auto-analysis:** Generated passwords are evaluated immediately
+### Password Generator
+- Configurable password length (12–128)
+- Uppercase, lowercase, numbers, and symbols
+- Cryptographically secure generation using `secrets`
+- Automatic analysis of generated passwords
 
-### User Experience
-- **Real-time results:** Updates as you type
-- **Visual strength bar:** Color-coded progress indicator
-- **Clipboard support:** Copy with one click
-- **Keyboard shortcuts:** Analyze, generate, and navigate quickly
-- **Responsive layout:** Adjusts to the window size
+### Export
+- TXT
+- JSON
+- CSV
 
-### Export & Reporting
-- **Multi-format exports:** TXT, JSON, CSV
-- **Privacy-first:** Exports exclude the password unless explicitly chosen
+### User Interface
+- Tkinter desktop GUI
+- Strength meter
+- Password entropy display
+- Estimated crack time
+- Copy to clipboard
+- Keyboard shortcuts
+
+---
 
 ## Screenshots
 
@@ -52,34 +59,30 @@ This project was developed as part of my cybersecurity learning journey to explo
 
 ## Project Structure
 
-```
+```text
 password-strength-checker/
+├── docs/
+├── resources/
+├── src/
+├── tests/
 ├── README.md
-├── LICENSE
 ├── CHANGELOG.md
+├── LICENSE
 ├── pyproject.toml
 ├── requirements.txt
 ├── requirements-dev.txt
-├── docs/
-│   ├── architecture.md
-│   ├── threat_model.md
-│   └── screenshots/
-├── src/
-│   └── password_strength_checker/
-├── tests/
-│   ├── unit/
-│   └── integration/
-└── resources/
-    └── common_passwords.txt
 ```
+
+---
 
 ## Installation
 
-### Prerequisites
-- Python 3.13+ ([Download](https://www.python.org/downloads/))
-- pip (included with Python)
+### Clone Repository
 
-### Setup
+```bash
+git clone https://github.com/Sithiraharithajeewa/password-strength-checker.git
+cd password-strength-checker
+```
 
 1. Clone the repository
 
@@ -88,54 +91,72 @@ git clone https://github.com/Sithiraharithajeewa/password-strength-checker.git
 cd password-strength-checker
 ```
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+### Create Virtual Environment
 
-3. Install the application in editable mode:
-   ```bash
-   pip install -e .
-   ```
+```bash
+python -m venv venv
+```
 
-4. Install development dependencies (optional):
-   ```bash
-   pip install -r requirements-dev.txt
-   ```
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+### Install
+
+```bash
+pip install -e .
+```
+
+Optional
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+---
 
 ## Usage
 
-### Start the application
+Run the application
 
 ```bash
 python -m password_strength_checker.main
 ```
 
-### Basic workflow
+---
 
-1. Enter a password in the input field
-2. Press `Enter` or click **Analyze**
-3. Review the strength score, entropy, and crack time
-4. Generate a secure password with character options
-5. Export the analysis as TXT, JSON, or CSV
-
-### Keyboard shortcuts
+## Keyboard Shortcuts
 
 | Shortcut | Action |
-|----------|--------|
-| `Enter` | Analyze current password |
-| `Ctrl+C` | Copy password to clipboard |
-| `Ctrl+G` | Generate new password |
-| `Tab` | Navigate between controls |
+|-----------|--------|
+| Enter | Analyze Password |
+| Ctrl+C | Copy Password |
+| Ctrl+G | Generate Password |
+| Tab | Navigate Controls |
 
-## Technologies Used
+---
 
-- Python 3.13
+## Technologies
+
+- Python 3.13+
 - Tkinter
 - pytest
-- ruff
 - mypy
+- Tkinter
+- pytest
+- mypy
+- ruff
+
+---
+
 - Key Python libraries:
   - pathlib
   - dataclasses
@@ -167,12 +188,13 @@ python -m mypy src
 
 ## Future Improvements
 
-- Multi-language UI
+- Multi-language support
 - Theme customization
-- Password policy templates
-- Advanced export workflows
-- Additional pattern analysis rules
+- Password policy profiles
+- Additional password analysis rules
+
+---
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License
